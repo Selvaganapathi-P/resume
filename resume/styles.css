@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa, #b2dfdb);
+    animation: backgroundAnimation 20s infinite alternate;
+}
+
+/* Container for the Resume */
+.resume-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    animation: fadeIn 2s ease-in;
+    overflow: auto;
+    position: relative;
+    max-height: 90vh; /* Adjust for scrolling */
+}
+
+/* Title of the Resume */
+.resume-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00796b;
+    font-size: 3.5em;
+    font-weight: bold;
+    animation: slideIn 1s ease-out, glow 1.5s ease-in-out infinite;
+}
+
+/* Contact Information */
+.contact-info {
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in;
+}
+
+.contact-info .name {
+    font-size: 2em;
+    font-weight: bold;
+    color: #004d40;
+}
+
+.contact-info .email {
+    color: #00796b;
+    font-style: italic;
+}
+
+/* Career Objective Section */
+.career-objective {
+    margin-bottom: 30px;
+}
+
+.career-objective h2 {
+    border-bottom: 3px solid #00796b;
+    padding-bottom: 10px;
+    color: #004d40;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    position: relative;
+    animation: headingEffect 1.5s ease-in-out;
+}
+
+.career-objective p {
+    line-height: 1.6;
+}
+
+/* Education Section */
+.education {
+    margin-bottom: 30px;
+}
+
+.education h2 {
+    border-bottom: 3px solid #00796b;
+    padding-bottom: 10px;
+    color: #004d40;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    position: relative;
+    animation: headingEffect 1.5s ease-in-out;
+}
+
+.education table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.education table, th, td {
+    border: 1px solid #004d40;
+}
+
+.education th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+.education th {
+    background-color: #00796b;
+    color: white;
+}
+
+/* Projects, Strengths, and Hobbies Sections */
+.projects, .strengths, .hobbies {
+    margin-bottom: 30px;
+}
+
+.projects h2, .strengths h2, .hobbies h2 {
+    border-bottom: 3px solid #00796b;
+    padding-bottom: 10px;
+    color: #004d40;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    position: relative;
+    animation: headingEffect 1.5s ease-in-out;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer Button */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in;
+}
+
+button:hover {
+    background-color: #004d40;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #e0f7fa, #b2dfdb);
+    }
+    100% {
+        background: linear-gradient(135deg, #b2dfdb, #e0f7fa);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #00796b;
+    }
+    50% {
+        text-shadow: 0 0 20px #004d40;
+    }
+    100% {
+        text-shadow: 0 0 5px #00796b;
+    }
+}
+
+@keyframes headingEffect {
+    0% {
+        color: #004d40;
+        transform: translateY(-10px);
+    }
+    50% {
+        color: #00796b;
+        transform: translateY(0);
+    }
+    100% {
+        color: #004d40;
+        transform: translateY(-10px);
+    }
+}
